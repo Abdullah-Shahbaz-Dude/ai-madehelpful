@@ -4,10 +4,15 @@ import { Link, useLocation } from 'react-router-dom'
 const Header: FC = () => {
   const location = useLocation()
 
-  const navLinkClass = (path: string) =>
-    location.pathname === path
+  const navLinkClass = (path: string) => {
+    const isActive =
+      path === '/learn'
+        ? location.pathname === '/learn' || location.pathname.startsWith('/learn/')
+        : location.pathname === path
+    return isActive
       ? 'px-4 py-1.5 text-sm font-medium bg-white dark:bg-slate-700 shadow-sm rounded-full text-primary'
       : 'px-4 py-1.5 text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-white transition-colors'
+  }
 
   return (
     <nav className="sticky top-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">

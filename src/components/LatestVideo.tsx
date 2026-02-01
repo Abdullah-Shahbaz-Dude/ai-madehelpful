@@ -1,4 +1,5 @@
 import type { FC } from 'react'
+import { Link } from 'react-router-dom'
 
 const VIDEO_THUMBNAIL =
   'https://lh3.googleusercontent.com/aida-public/AB6AXuDyE-vQPDbDcVyHtaSoiTmrrIaoQe0ScnNP1dwRa9OXvA_o7jUDcTTeZ1XBw8j5bcrMHTf-NEoy1obTB65_C2oUZq6Fx6wGn7DMMw13yo2EsN8fWiaEk5BfhyUi5-4YsLV2KFswwAy_iZmS8fNCCWsbxViecRTkrbWPCnKp2mShKSKu45EDCYPshgPQzqHvCxii5TSvKR9OjCkApAEiXAQEfBHquuISaU4BF-Q8HBNSMseYtUAePh1_25KPbt_X9-YkkY9Y47wTkJeq'
@@ -36,7 +37,10 @@ const LatestVideo: FC = () => {
           </a>
         </div>
       </div>
-      <div className="relative group cursor-pointer">
+      <Link
+        to="/learn/automate-daily-workflow-chatgpt-zapier"
+        className="relative group cursor-pointer block"
+      >
         <div className="absolute -inset-4 bg-primary/10 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
         <div className="relative rounded-2xl overflow-hidden shadow-2xl">
           <img
@@ -50,7 +54,7 @@ const LatestVideo: FC = () => {
             </div>
           </div>
         </div>
-      </div>
+      </Link>
     </section>
   )
 }

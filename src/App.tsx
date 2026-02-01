@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Layout from './components/Layout'
 import Home from './pages/Home'
 import Learn from './pages/Learn'
+import TutorialDetail from './pages/TutorialDetail'
 import Prompts from './pages/Prompts'
 import Tools from './pages/Tools'
 import Resources from './pages/Resources'
@@ -25,6 +26,14 @@ function App() {
           element={
             <Layout>
               <Learn />
+            </Layout>
+          }
+        />
+        <Route
+          path="/learn/:slug"
+          element={
+            <Layout>
+              <TutorialDetail />
             </Layout>
           }
         />
