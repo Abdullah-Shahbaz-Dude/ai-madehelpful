@@ -6,8 +6,6 @@ import LatestTutorials from '../components/LatestTutorials'
 import ToolsCovered from '../components/ToolsCovered'
 import AdvancedResources from '../components/AdvancedResources'
 import BuiltForRealWork from '../components/BuiltForRealWork'
-import Newsletter from '../components/Newsletter'
-import Footer from '../components/Footer'
 
 import type { FC } from 'react'
 
@@ -23,9 +21,7 @@ const Home: FC = () => {
         <ToolsCovered />
         <AdvancedResources />
         <BuiltForRealWork />
-        <Newsletter />
       </main>
-      <Footer />
     </div>
   )
 }
