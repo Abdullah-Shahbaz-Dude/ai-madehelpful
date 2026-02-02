@@ -8,6 +8,7 @@ import Tools from './pages/Tools'
 import Resources from './pages/Resources'
 import Courses from './pages/Courses'
 import Videos from './pages/Videos'
+import Contact from './pages/Contact'
 
 function App() {
   return (
@@ -74,6 +75,14 @@ function App() {
           element={
             <Layout>
               <Videos />
+            </Layout>
+          }
+        />
+        <Route
+          path="/contact"
+          element={
+            <Layout>
+              <Contact />
             </Layout>
           }
         />

@@ -5,7 +5,7 @@ const Hero: FC = () => {
   return (
     <header className="relative pt-20 pb-24 overflow-hidden hero-gradient ">
       <div className="max-w-7xl   mx-auto px-4 sm:px-6 lg:px-8 text-center ">
-        <div className="inline-flex items-center px-4 py-2 rounded-ful  dark:bg-blue-900/30 text-primary text-sm font-semibold mb-8 border border-blue-100 dark:border-blue-800/50">
+        <div className="inline-flex items-center px-4 py-2 rounded-ful  dark:bg-blue-900/30 text-primary text-sm font-semibold mb-8   dark:border-blue-800/50">
           <span className="material-icons-outlined text-sm mr-2">
             auto_awesome
           </span>
