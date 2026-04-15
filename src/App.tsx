@@ -1,14 +1,15 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Layout from './components/Layout'
-import Home from './pages/Home'
-import Learn from './pages/Learn'
-import TutorialDetail from './pages/TutorialDetail'
-import Prompts from './pages/Prompts'
-import Tools from './pages/Tools'
-import Resources from './pages/Resources'
-import Courses from './pages/Courses'
-import Videos from './pages/Videos'
-import Contact from './pages/Contact'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Layout from "./components/Layout";
+import Home from "./pages/Home";
+import Learn from "./pages/Learn";
+import TutorialDetail from "./pages/TutorialDetail";
+import Prompts from "./pages/Prompts";
+import Tools from "./pages/Tools";
+import Resources from "./pages/Resources";
+import Courses from "./pages/Courses";
+import Videos from "./pages/Videos";
+import VideoDetail from "./pages/VideoDetail";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
@@ -79,6 +80,14 @@ function App() {
           }
         />
         <Route
+          path="/videos/:videoId"
+          element={
+            <Layout>
+              <VideoDetail />
+            </Layout>
+          }
+        />
+        <Route
           path="/contact"
           element={
             <Layout>
@@ -88,7 +97,7 @@ function App() {
         />
       </Routes>
     </Router>
-  )
+  );
 }
 
-export default App
+export default App;
