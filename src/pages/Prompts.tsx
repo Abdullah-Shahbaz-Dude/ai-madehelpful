@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import type { FC } from "react";
+import { Link } from "react-router-dom";
 
 const FILTERS = [
   "All",
@@ -174,6 +175,51 @@ const Prompts: FC = () => {
       {/* Main: prompt cards */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="group bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden hover:shadow-2xl hover:shadow-primary/5 transition-all duration-300 flex flex-col">
+            <div className="p-6 flex-grow">
+              <div className="flex justify-between items-start mb-4">
+                <span className="inline-flex items-center px-2.5 py-0.5 rounded-md text-xs font-semibold bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400">
+                  NotebookLM
+                </span>
+                <span
+                  className="text-slate-400 transition-colors p-1"
+                  aria-hidden="true"
+                >
+                  <span className="material-icons-outlined">library_books</span>
+                </span>
+              </div>
+              <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors text-slate-900 dark:text-white">
+                NotebookLM Prompt Library
+              </h3>
+              <p className="text-slate-600 dark:text-slate-400 text-sm mb-6 leading-relaxed">
+                18 ready-to-use prompts for university students: synthesis,
+                flashcards, research, writing, viva prep, and more.
+              </p>
+              <div className="flex flex-wrap gap-2 mt-auto">
+                <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 bg-slate-50 dark:bg-slate-800 px-2 py-1 rounded">
+                  #NotebookLM
+                </span>
+                <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 bg-slate-50 dark:bg-slate-800 px-2 py-1 rounded">
+                  #Study
+                </span>
+                <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 bg-slate-50 dark:bg-slate-800 px-2 py-1 rounded">
+                  #University
+                </span>
+              </div>
+            </div>
+            <div className="px-6 py-4 bg-slate-50/50 dark:bg-slate-800/30 border-t border-slate-100 dark:border-slate-800 flex justify-between items-center">
+              <span className="text-xs text-slate-500">Updated today</span>
+              <Link
+                to="/prompts/notebooklm"
+                className="text-primary text-sm font-semibold inline-flex items-center group/btn hover:underline"
+              >
+                Details{" "}
+                <span className="material-icons-outlined text-[18px] ml-1 group-hover/btn:translate-x-1 transition-transform">
+                  arrow_forward
+                </span>
+              </Link>
+            </div>
+          </div>
           {PROMPTS_DATA.map((prompt) => (
             <div
               key={prompt.title}

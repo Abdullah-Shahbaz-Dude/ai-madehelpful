@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Learn from "./pages/Learn";
 import TutorialDetail from "./pages/TutorialDetail";
 import Prompts from "./pages/Prompts";
+import NotebookLMPrompts from "./pages/NotebookLMPrompts";
 import Tools from "./pages/Tools";
 import Resources from "./pages/Resources";
 import Courses from "./pages/Courses";
@@ -44,6 +45,14 @@ function App() {
           element={
             <Layout>
               <Prompts />
+            </Layout>
+          }
+        />
+        <Route
+          path="/prompts/notebooklm"
+          element={
+            <Layout>
+              <NotebookLMPrompts />
             </Layout>
           }
         />
